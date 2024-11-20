@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Profile - FNDetection{% endblock %}
+
+{% block content %}
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow-lg p-4" style="width: 100%; max-width: 700px; border-radius: 15px; border: none;">
+        <!-- Phần hình ảnh và tên người dùng -->
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='profi.png') }}" alt="Profile Image" class="rounded-circle mb-3" width="120" height="120">
+            <h2 class="font-weight-bold">{{ user.username }}</h2>
+        </div>
+        
+        <!-- Thông tin cá nhân -->
+        <div class="px-3">
+            <div class="row mb-3">
+                <div class="col-6">
+                    <h5 class="text-muted"><i class="fas fa-envelope mr-2"></i>Email:</h5>
+                    <p>{{ user.email }}</p>
+                </div>
+                <div class="col-6">
+                    <h5 class="text-muted"><i class="fas fa-phone mr-2"></i>Phone:</h5>
+                    <p>{{ user.phone }}</p>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <h5 class="text-muted"><i class="fas fa-user-circle mr-2"></i>Full Name:</h5>
+                    <p>{{ user.username }}</p>  <!-- Hiển thị username làm full name -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Các nút điều hướng -->
+        <div class="text-center mt-4">
+            <a href="/logout" class="btn btn-outline-danger btn-lg mx-2"><i class="fas fa-sign-out-alt"></i> Log out</a>
+            <a href="/" class="btn btn-outline-secondary btn-lg mx-2"><i class="fas fa-home"></i> Home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
