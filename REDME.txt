@@ -1,0 +1,19 @@
+
+
+// hướng dẫn sử dụng
+cmd:
+pip install --upgrade pip
+
+// lệnh vào môi trường ảo. nếu vào đc sẽ thấy (myenc) 
+myenv\Scripts\activate
+// nêu k vào môi trường ảo đc cài thư viện: 
+pip install -r requirements.txt
+
+// cmd:
+python
+import nltk
+nltk.download('stopwords')
+nltk.download('wordnet')
+// chạy file
+app.py 
+copy đường dẫn
